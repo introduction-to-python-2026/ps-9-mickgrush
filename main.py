@@ -23,7 +23,8 @@ X_train, X_test, y_train, y_test = train_test_split(scaled_X, y, test_size=0.2, 
 from sklearn.svm import SVC
 
 svc = SVC()
-svc.fit(X,y)
+
+svc.fit(X_train, y_train)
 
 y_pred = svc.predict(X_test)
 
